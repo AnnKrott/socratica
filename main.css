@@ -125,6 +125,23 @@ html {
     background-repeat: no-repeat;
 }
 
+/* second page */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-shrink: 0;
+    height: 90vh;
+}
+
+.bg-image {
+    width: 70vw;
+    height: 45vw;
+    margin: auto;
+    background: url(./assets/second-page.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 @media (max-width: 700px) {
     .hero {
         flex-direction: column-reverse;
@@ -141,20 +158,11 @@ html {
     .btn:hover {
         transform: scale(1.02);
     }
+
+    .bg-image {
+        width: 90vw;
+        height: 65vw;
+    }
 }
 
-/* second page */
-.wrapper {
-    display: flex;
-    height: 90vh;
-}
-
-.bg-image {
-    width: 70vw;
-    height: 45vw;
-    margin: auto;
-    background: url(./assets/second-page.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
