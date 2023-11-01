@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;600;700&display=swap');
+/* globals */
+:root {
+    --accent-color: #00b4e6;
+    --light-font-color: #fff;
+    --dark-font-color: #444444;
+    --font-main: 'Roboto Slab',
+        serif;
+}
+
+html {
+    height: 95vh;
+    overflow: hidden;
+    padding: 20px;
+    font-family: var(--font-main);
+    color: var(--dark-font-color)
+}
+
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.accent-blue {
+    color: var(--accent-color);
+}
+
+/* first page */
+.header {
+    margin-bottom: 50px;
+}
+
+.hero {
+    font-family: var(--font-main);
+}
+
+.logo {
+    position: relative;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    cursor: pointer;
+}
+
+.logo__triangle {
+    position: absolute;
+    stroke-width: 80;
+    opacity: 70%;
+}
+
+.logo__triangle--blue {
+    top: 5px;
+    left: 0;
+    fill: var(--accent-color);
+    stroke: var(--accent-color);
+}
+
+.logo__triangle--pink {
+    top: 0;
+    left: 5px;
+    fill: #e60060;
+    stroke: #e60060;
+}
+
+.logo__text {
+    padding-left: 40px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero__content {
+    max-width: clamp(300px, 70vw, 900px);
+}
+
+.hero__intro { 
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: clamp(20px, 0.3rem + 2.875vw, 60px);
+    font-weight: 700;
+}
+
+.hero__title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.hero__text {
+    font-size: clamp(14px, 0.825rem + 0.25vw, 18px);
+    line-height: 1.5;
+}
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 10px;
+    color: var(--light-font-color);
+    background-color: var(--accent-color);
+    font-size: 16px;
+    line-height: 1;
+    transition: transform .3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.hero__btn {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.hero__bg-image {
+    flex-shrink: 0;
+    width: clamp(320px, 40vw, 900px);
+    height: clamp(320px, 40vw, 900px);
+    background: url(./assets/start-page.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 700px) {
+    .hero {
+        flex-direction: column-reverse;
+    }
+
+    .hero__content {
+        max-width: unset;
+    }
+    
+    .hero__btn {
+        width: 100%;
+    }
+
+    .btn:hover {
+        transform: scale(1.02);
+    }
+}
+
+/* second page */
+.wrapper {
+    display: flex;
+    height: 90vh;
+}
+
+.bg-image {
+    width: 70vw;
+    height: 45vw;
+    margin: auto;
+    background: url(./assets/second-page.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
